@@ -180,7 +180,7 @@ body {
     background-color: rgba(0, 0, 0, .6);
     position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 50;
     padding: 1.5rem;
     display: flex;
     align-items: center;
@@ -214,6 +214,7 @@ body {
     height: .1rem;
     background-color: #eee;
     width: 40%;
+    transition: transform .3s;
 }
 
 .menu .line-2 {
@@ -224,15 +225,24 @@ body {
     margin-left: auto;
 }
 
+
+.menu .line-1, .menu .line-3 {
+    width: 60%;
+}
+
 .nav-list {
     position: fixed;
-    inset: 0;
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, .8);
     z-index: 20;
+    transition: top .4s;
 }
 
 .nav-link {
@@ -240,11 +250,33 @@ body {
     font-size: 3.5rem;
     letter-spacing: .3rem;
     color: #fff;
-    cursor: pointer;
+    cursor: pointer; 
     margin: 1rem 0;
-    transition: color .4s;
+    opacity: 0;
+    transition: color .4s, opacity .4s .4s;
 }
+
+.toggle-navmenu > .nav-link {
+    opacity: 1;
+}
+
 
 .nav-link:hover {
     color: #9e0e09;
+}
+
+.nav-list.toggle-navmenu {
+    top: 0;
+}
+
+.toggle-navmenu .line-2 {
+    transform: rotate(-45deg);
+}
+
+.toggle-navmenu .line-1 {
+    transform: rotate(45deg) translateY(2px) translateX(5px);
+}
+
+.toggle-navmenu .line-3  {
+    transform: rotate(45deg) translateY(-4px) translateX(-4px);
 }
