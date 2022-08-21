@@ -26,23 +26,42 @@ body {
 .section-1 {
   width: 100%;
   height: 100vh;
-  background: url(resources/hero-bg.jpeg) no-repeat;
-  background-size: cover;
+  background-image: radial-gradient(
+    circle,
+    #86a8e7,
+    #7691c5,
+    #657ba4,
+    #566584,
+    #465065,
+    #3e4353,
+    #353742,
+    #2b2c32,
+    #25252a,
+    #1f1f22,
+    #19191a,
+    #121212
+  );
+  /* background: url(resources/hero-bg.jpeg) no-repeat; 
+  background-size: cover;*/
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 15%;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .banner {
   width: 100%;
   text-align: center;
+  min-height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .banner-heading {
   position: relative;
   height: 10rem;
   perspective: 50rem;
+  overflow: hidden;
 }
 
 .banner-heading span {
@@ -60,6 +79,7 @@ body {
   text-align: center;
   opacity: 0;
   letter-spacing: 0.4rem;
+  white-space: nowrap;
 }
 
 .heading-1 {
@@ -84,9 +104,10 @@ body {
   text-transform: uppercase;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.6);
-  width: 30%;
-  margin: 0 auto 2rem auto;
-  padding: 1rem 0;
+  min-width: 30%;
+  max-width: 80%;
+  margin: 1rem auto 3.5rem auto;
+  padding: 1rem;
   box-shadow: 1rem 1rem 5rem rgba(0, 0, 0, 0.5);
   opacity: 0;
   visibility: hidden;
@@ -109,6 +130,7 @@ body {
   animation: fadeAnimation 1s 3.8s forwards;
   position: relative;
   overflow: hidden;
+  margin: 0 auto;
 }
 
 .banner-btn:before {
@@ -121,7 +143,7 @@ body {
   left: -100%;
   transform: skew(-30deg);
   transition: left 0.5s;
-  animation: blinkAnimation 0.8s 5s none;
+  animation: blinkAnimation 0.8s 4.5s none;
 }
 
 .banner-btn:hover:before {
@@ -132,7 +154,7 @@ body {
   0% {
     transform: translateX(-50%) translateZ(8rem) translateY(4rem);
     opacity: 0;
-    letter-spacing: 1rem;
+    letter-spacing: 0.8rem;
     font-size: 5rem;
   }
   5% {
@@ -251,7 +273,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   z-index: 20;
   transition: top 0.4s;
 }
