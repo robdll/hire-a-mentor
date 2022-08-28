@@ -1,6 +1,6 @@
 # hire-a-mentor
 
-Simple landing created with HTML, CSS & Javascript featuring different animation and transition.
+Simple landing created with HTML, CSS & Javascript featuring different animation and transition, and a menu button to show and hide the navbar.
 
 [Demo](https://robertodilillo.dev/hire-a-mentor)
 
